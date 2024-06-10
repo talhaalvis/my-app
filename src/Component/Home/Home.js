@@ -23,7 +23,7 @@ const Home = () => {
         <Header />
 
         <Box >
-          <Box sx={{ width: '25%', height: {xs:'200px',md:'250px',lg:'300px'}, background: 'rgb(111, 82, 67)', borderRadius: "100%", position: 'absolute', bottom: '-10%', right: '5%' }}>
+          <Box sx={{ width:{xs:'250px',md:'250px',lg:'300px'}, height: {xs:'234px',md:'250px',lg:'300px'}, background: 'rgb(111, 82, 67)', borderRadius: "100%", position: 'absolute', bottom: '-10%', right: '5%' }}>
             <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '300px', flexDirection: 'column' }}>
               <Typography sx={{ color: 'rgb(255, 255, 255)', textShadow: '2px 2px 0px rgba(255, 255, 255, 0.3)', fontWeight: 600, fontSize: {xs:'20px',md:'30px',lg:'40px'} }}>BOOK NOW!!</Typography>
               <Button style={{ background: 'rgb(255, 255, 255)', color: 'rgb(48, 48, 48)', textTransform: 'uppercase' }}>Reserved Now</Button>

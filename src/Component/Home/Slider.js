@@ -119,7 +119,7 @@ const NewSlider = () => {
                   </Avatar>
                   <Box sx={{ display: 'flex', alignItems: 'center', marginBottom: 1 }}>
                     {Array.from({ length: 5 }).map((_, index) => (
-                      <span key={index}>&#9733;</span> // Star icon
+                      <span key={index} style={{color:'yellow'}}>&#9733;</span> // Star icon
                     ))}
                   </Box>
                   <Typography variant="body2" color="textSecondary" align="center" gutterBottom>

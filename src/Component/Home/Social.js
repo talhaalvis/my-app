@@ -28,8 +28,9 @@ const Social = () => {
     const titleStyle = {
         fontWeight: 'bold',
         fontSize: '40px',
-        marginBottom: '40px',
+        marginBottom: {xs:'0px',md:"40px"},
         color: 'rgb(27, 27, 27)',
+     
     };
 
     const descriptionStyle = {
@@ -57,7 +58,7 @@ const Social = () => {
                             position: 'relative', 
                             padding: { xs: '8px', md: '24px' },
                         }}>
-                            <Box sx={{position:'absolute',bottom:'2%'}}>
+                            <Box sx={{position:'absolute',bottom:{xs:"-71%",md:'2%'}}}>
 
                                 <Typography variant="h4" sx={titleStyle}>
                                     GIFT VOUCHERS

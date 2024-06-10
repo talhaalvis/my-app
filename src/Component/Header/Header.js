@@ -72,14 +72,14 @@ function ResponsiveAppBar() {
             Billericay Treat
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none', } ,width:'100%'}}>
             <IconButton
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              color="rgb(111, 82, 67)"
             >
               <MenuIcon />
             </IconButton>
@@ -99,33 +99,45 @@ function ResponsiveAppBar() {
               onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: 'block', md: 'none' },
+                width:'100%'
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
+                 <Button
+                 key={page}
+                 component={Link}
+                 to={`/${page === 'Home' ? '' : page.toLowerCase().replace(' ', '-')}`}
+                 onClick={handleCloseNavMenu}
+                 sx={{
+                   my: 2,
+                   color: currentPath === page ? 'rgb(27, 27, 27)' : 'rgb(27, 27, 27)', // Set active page color to black
+                   display: 'block',
+                   fontWeight:currentPath === page ? 700 :400
+                 }}
+               >
+                 {page}
+               </Button>
               ))}
             </Menu>
           </Box>
           
-          <Typography
-            variant="h5"
+           <Typography
+            variant="h6"
             noWrap
             component="a"
             href="#app-bar-with-responsive-menu"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
               fontFamily: 'monospace',
               fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
+              letterSpacing: '.2rem',
+              color: 'rgb(111, 82, 67)',
               textDecoration: 'none',
+              textTransform:'uppercase'
             }}
           >
-            LOGO
+            Billericay Treat
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}>
